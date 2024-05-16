@@ -52,6 +52,7 @@ export default function Navbar() {
           spacing="0%"
           ml={[2, 4, 6, 8]}
           display={{ base: "none", md: "flex" }}
+          fontWeight='600'
         >
           {[
             "about",
