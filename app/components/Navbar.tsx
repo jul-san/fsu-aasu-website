@@ -65,7 +65,6 @@ export default function Navbar() {
               key={item}
               colorScheme="transparent"
               textColor="black"
-              fontFamily="sans-serif"
               fontWeight="lighter"
               size="md"
               maxWidth="auto"
@@ -96,7 +95,6 @@ export default function Navbar() {
                   w="100%"
                   colorScheme="transparent"
                   textColor="black"
-                  fontFamily="sans-serif"
                   fontWeight="lighter"
                   size="lg"
                   onClick={onClose}
