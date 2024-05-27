@@ -17,7 +17,7 @@ export default function AboutBanner() {
           paddingBottom="5%"
           textAlign="left"
         >
-          welcome to the family! :)
+          Welcome to the family! :)
         </Text>
       </Box>
       <Box 

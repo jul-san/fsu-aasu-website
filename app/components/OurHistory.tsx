@@ -28,7 +28,7 @@ export default function OurHistory() {
             padding="10%"
             textAlign="left"
           >
-            <b>our history</b>
+            <b>Our History</b>
             <br />
             <br />
             Faye Hunt and Rich Sealy co-founded AASU in 1996 to better support
@@ -80,7 +80,7 @@ export default function OurHistory() {
             padding="10%"
             textAlign="left"
           >
-            <b>our community</b>
+            <b>Our Community</b>
             <br />
             <br />
             Thousands of students have come to call AASU home. It is a vehicle
@@ -117,7 +117,7 @@ export default function OurHistory() {
             padding="10%"
             textAlign="left"
           >
-            <b>our mission</b>
+            <b>Our Mission</b>
             <br />
             <br />
             AASU will serve to encourage and promote the civic engagement of the

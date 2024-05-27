@@ -2,7 +2,7 @@ import { Box, Text, Img } from "@chakra-ui/react";
 
 export default function Banner() {
   return (
-    <Box position="relative" display="inline-block" w="100%" overflow="hidden" m="0" p="0">
+    <Box position="relative" display="inline-block" w="100%" overflow="hidden" m="0" >
       <Img
         src="/images/aasu-board-laughing.jpeg"
         maxWidth={{ base: "300%", md: "100%", lg: "100%" }}
@@ -21,10 +21,10 @@ export default function Banner() {
         m="0" // Ensure no margin
       >
         <Text fontSize={{ base: "150%", md: "150%", lg: "225%" }} fontWeight="500" textAlign="center" color="white" m="0" p="0">
-          florida state university
+          Florida State University
         </Text>
         <Text fontSize={{ base: "250%", md: "300%", lg: "500%" }} fontWeight="500" textAlign="center" color="#eee8aa" whiteSpace="pre-line" m="0" p="0">
-          asian american<br />student union
+          Asian American<br />Student Union
         </Text>
       </Box>
     </Box>
