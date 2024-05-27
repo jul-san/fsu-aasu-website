@@ -16,9 +16,19 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import Link from "next/link";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const links = [
+    { name: "about", href: "/" },
+    { name: "affiliates", href: "/affiliates" },
+    { name: "board", href: "/board" },
+    { name: "events", href: "/events" },
+    { name: "get involved!", href: "/get-involved" },
+    { name: "contact", href: "/contact" },
+  ];
 
   return (
     <>
@@ -29,6 +39,15 @@ export default function Navbar() {
         px={[2, 4, 6]}
         py={[1, 2, 4]}
         padding="5%"
+        position='fixed'
+        top="0"
+        left="0"
+        right="0"
+        zIndex="10"
+        bg="transparent"
+        backdropFilter="blur(10px)"
+        boxShadow="0 2px 4px rgba(0, 0, 0, 0.1)" // Optional: Add shadow for better visibility
+
       >
         <Img
           src="/images/aasu-logo.jpeg"
@@ -54,24 +73,18 @@ export default function Navbar() {
           display={{ base: "none", md: "flex" }}
           fontWeight="600"
         >
-          {[
-            "about",
-            "affiliates",
-            "board",
-            "events",
-            "get involved!",
-            "contact",
-          ].map((item) => (
-            <Button
-              key={item}
-              colorScheme="transparent"
-              textColor="black"
-              fontWeight="lighter"
-              size="md"
-              maxWidth="auto"
-            >
-              {item}
-            </Button>
+          {links.map(({ name, href }) => (
+            <Link key={name} href={href} passHref>
+              <Button
+                colorScheme="transparent"
+                textColor="black"
+                fontWeight="lighter"
+                size="md"
+                maxWidth="auto"
+              >
+                {name}
+              </Button>
+            </Link>
           ))}
         </HStack>
       </Flex>
@@ -83,25 +96,19 @@ export default function Navbar() {
           <DrawerHeader />
           <DrawerBody>
             <VStack spacing="24px" fontWeight="600">
-              {[
-                "about",
-                "affiliates",
-                "board",
-                "events",
-                "get involved!",
-                "contact",
-              ].map((item) => (
-                <Button
-                  key={item}
-                  w="100%"
-                  colorScheme="transparent"
-                  textColor="black"
-                  fontWeight="lighter"
-                  size="lg"
-                  onClick={onClose}
-                >
-                  {item}
-                </Button>
+              {links.map(({ name, href }) => (
+                <Link key={name} href={href} passHref>
+                  <Button
+                    w="100%"
+                    colorScheme="transparent"
+                    textColor="black"
+                    fontWeight="lighter"
+                    size="lg"
+                    onClick={onClose}
+                  >
+                    {name}
+                  </Button>
+                </Link>
               ))}
             </VStack>
           </DrawerBody>
